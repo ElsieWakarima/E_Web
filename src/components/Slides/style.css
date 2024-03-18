@@ -1,0 +1,30 @@
+.wrapper{
+    overflow-y: auto;
+    /* height:223.5;
+    width:223.5; */
+}
+.wrapper::-webkit-scrollbar{
+    display: none;
+}
+.wrapper .item{
+    /* height:223.5;
+    width:223.5; */
+   text-align: center;
+   position: relative;
+   padding: 2px;
+}
+.myElement {
+    white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  }
+.mycard1{
+background-color: azure;
+border-radius: 10px;
+}
+.nn{
+  color: black !important;
+}
+.mpointer{
+  cursor: pointer;
+}
