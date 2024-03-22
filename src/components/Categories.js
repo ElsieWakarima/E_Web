@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "../styles/hidescroll.css";
 
 const Categories = () => {
   const [cat, setCat] = useState([]);
@@ -53,11 +54,15 @@ const Categories = () => {
   </div>
 
   {catloading ? (
-    <div>
+    <div
+      style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
+    >
       <p>Loading categories...</p>
     </div>
   ) : (
-    <div style={{ display: 'flex', flexDirection: 'row', marginTop: '10px', justifyContent: 'center' }}>
+    <div 
+      className='flex flex-row justify-center w-full overflow-x-auto scrollbar-hide'
+    >
       {cat.map((item) => (
         <div key={item.sno} style={{ display: 'flex', flexDirection: 'column', margin: '0 10px', alignItems: 'center' }}>
           <button style={{ backgroundColor: 'lightgray', height: '56px', width: '56px', justifyContent: 'center', alignItems: 'center', borderRadius: '28px' }}

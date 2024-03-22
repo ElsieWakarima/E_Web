@@ -58,8 +58,16 @@ const RecommendedProducts = () => {
         <div className="absolute right-0 h-full top-0 border-l-2 border-orange-400"></div>
       </div>
       {recomendedloading ? (
-        <p className="mt-6">Loading recommended products...</p>
-      ) : (
+
+
+        // Show a loading message while the recommended products are being fetched and an animation and be center
+        <div
+          className=" justify-center items-center flex w-screen text-center"
+        >
+          <p>Loading recommended products...</p>
+        </div>
+
+        ) : (
         <div className="w-full overflow-x-auto">
           <div className="flex">
             {recomended.slice(0, numItemsToShow).map((item, index) => (
